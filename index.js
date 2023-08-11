@@ -7,6 +7,7 @@ import inquirer from 'inquirer'
 // var qr = require('qr-image')
 import qr from 'qr-image'
 import fs from 'fs'
+import { getSystemErrorMap } from 'util'
 
 inquirer
   .prompt([{ message: 'your URL:', name: 'URL' }])
@@ -16,6 +17,12 @@ inquirer
 
     var qr_svg = qr.image(url)
     qr_svg.pipe(fs.createWriteStream('url.png'))
+
+    // fs means file system, and code below can be found in https://nodejs.org/dist/latest-v18.x/docs/api/fs.html#fswritefilefile-data-options-callback
+    fs.writeFile('urlText.txt', url, (err) => {
+      if (err) throw err
+      console.log('The file has been saved!')
+    })
   })
   .catch((error) => {
     if (error.isTtyError) {
