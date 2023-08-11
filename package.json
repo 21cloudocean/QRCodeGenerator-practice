@@ -1,0 +1,24 @@
+{
+  "name": "2.4-qr-code-project",
+  "version": "1.0.0",
+  "description": "QRcodeGeneratorPractice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/21cloudocean/QRCodeGenerator-practice.git"
+  },
+  "author": "dora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/21cloudocean/QRCodeGenerator-practice/issues"
+  },
+  "homepage": "https://github.com/21cloudocean/QRCodeGenerator-practice#readme",
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^9.2.10",
+    "qr-image": "^3.2.0"
+  }
+}
